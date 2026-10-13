@@ -6,7 +6,7 @@
   <title>Font Showcase - Business Portfolio Typography</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Figtree:wght@300;400;500;600;700;800;900&family=Jost:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700;900&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Garamond:wght@400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Figtree:wght@300;400;500;600;700;800;900&family=Jost:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700;900&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Garamond:wght@400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Lora:wght@400;500;600;700&family=League+Spartan:wght@300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -175,6 +175,8 @@
     .fc-garamond .font-name, .fc-garamond .font-sample { font-family: 'Garamond', serif; }
     .fc-bodoni .font-name, .fc-bodoni .font-sample { font-family: 'Bodoni Moda', serif; }
     .fc-lora .font-name, .fc-lora .font-sample { font-family: 'Lora', serif; }
+    .fc-league-spartan .font-name, .fc-league-spartan .font-sample { font-family: 'League Spartan', sans-serif; }
+    .fc-eb-garamond .font-name, .fc-eb-garamond .font-sample { font-family: 'EB Garamond', serif; }
 
     /* Style Toggle Buttons */
     .style-toggles {
@@ -382,6 +384,76 @@
     .combo-5 .combo-preview .combo-tagline { font-family: 'Source Sans 3', sans-serif; }
     .combo-5 .combo-preview .combo-body { font-family: 'Source Sans 3', sans-serif; }
     .combo-5 .combo-preview .combo-label { font-family: 'DM Sans', sans-serif; }
+
+    /* ===== LOGO-SYNCED SECTION (HYRA ARCHITECTS) ===== */
+    .logo-banner {
+      background: var(--card-bg);
+      border: 2px solid var(--accent);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem 0 2.5rem;
+    }
+    .logo-word {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+      letter-spacing: 0.12em;
+      line-height: 1;
+      color: var(--fg);
+    }
+    .logo-sub {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.75rem, 2vw, 1rem);
+      letter-spacing: 0.65em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.25rem;
+    }
+    .logo-analysis {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 1.5rem auto 0;
+      line-height: 1.7;
+      text-align: left;
+    }
+    .logo-analysis strong { color: var(--fg); }
+    .subsection-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      margin: 2.5rem 0 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .subsection-note {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .combo-6 .combo-preview .combo-hero { font-family: 'Jost', sans-serif; }
+    .combo-6 .combo-preview .combo-tagline, .combo-6 .combo-preview .combo-body { font-family: 'Inter', sans-serif; }
+    .combo-6 .combo-preview .combo-label { font-family: 'Jost', sans-serif; font-weight: 300; letter-spacing: 0.4em; }
+
+    .combo-7 .combo-preview .combo-hero { font-family: 'Space Grotesk', sans-serif; }
+    .combo-7 .combo-preview .combo-tagline, .combo-7 .combo-preview .combo-body { font-family: 'IBM Plex Sans', sans-serif; }
+    .combo-7 .combo-preview .combo-label { font-family: 'IBM Plex Sans', sans-serif; letter-spacing: 0.3em; }
+
+    .combo-8 .combo-preview .combo-hero { font-family: 'League Spartan', sans-serif; letter-spacing: 0.02em; }
+    .combo-8 .combo-preview .combo-tagline, .combo-8 .combo-preview .combo-body { font-family: 'Source Sans 3', sans-serif; }
+    .combo-8 .combo-preview .combo-label { font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.3em; }
+
+    .combo-9 .combo-preview .combo-hero { font-family: 'Jost', sans-serif; }
+    .combo-9 .combo-preview .combo-tagline, .combo-9 .combo-preview .combo-body { font-family: 'EB Garamond', serif; }
+    .combo-9 .combo-preview .combo-label { font-family: 'Jost', sans-serif; font-weight: 300; letter-spacing: 0.4em; }
+
+    .combo-10 .combo-preview .combo-hero { font-family: 'Space Grotesk', sans-serif; }
+    .combo-10 .combo-preview .combo-tagline, .combo-10 .combo-preview .combo-body { font-family: 'DM Sans', sans-serif; }
+    .combo-10 .combo-preview .combo-label { font-family: 'DM Sans', sans-serif; letter-spacing: 0.3em; }
   </style>
 </head>
 <body>
@@ -787,6 +859,198 @@
       </article>
     </div>
 
+    <!-- ===== LOGO-SYNCED SECTION ===== -->
+    <h2 class="section-heading">Logo-Synced Typography — HYRA Architects</h2>
+    <p class="section-subheading">Fonts and pairings chosen to extend your wordmark's visual language across the whole website.</p>
+
+    <div class="logo-banner">
+      <div class="logo-word">HYRA</div>
+      <div class="logo-sub">Architects</div>
+      <div class="logo-analysis">
+        <strong>Logo DNA:</strong> monoline geometric capitals · constructed straight strokes · stencil-style cuts (open "R", crossbar-less "A") · tall condensed proportions · light, wide-tracked subline.<br>
+        <strong>Sync strategy:</strong> pair the mark with geometric / technical grotesques that share its constructed, angular, low-contrast character — never round or soft faces.
+      </div>
+    </div>
+
+    <h3 class="subsection-title">5 Individual Fonts That Sync With the Logo</h3>
+    <p class="subsection-note">Note: Futura and DIN Neuzeit Grotesk (from your list) are the closest commercial matches to the mark; Jost and Space Grotesk below are their free Google Fonts equivalents used in this live demo.</p>
+
+    <div class="font-grid">
+      <article class="font-card fc-jost free">
+        <div class="font-header">
+          <div class="font-name">Jost</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Built from pure geometry.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Headlines + wide-tracked labels (the "ARCHITECTS" subline style)<br>
+          <strong>Vibe:</strong> Monoline geometric, Bauhaus-built — closest free match to the logo's constructed strokes
+        </div>
+        <div class="verdict">🎯 <strong>Logo mirror</strong> — use Jost Light with 0.4–0.6em letter-spacing to recreate the logo's tracked subline anywhere on the site.</div>
+      </article>
+
+      <article class="font-card fc-space-grotesk free">
+        <div class="font-header">
+          <div class="font-name">Space Grotesk</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Sharp cuts, clean plans.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Subheads, technical accents, project numbers<br>
+          <strong>Vibe:</strong> Angular terminals, blueprint energy
+        </div>
+        <div class="verdict">✂️ <strong>Echoes the stencil cuts</strong> — its diagonal terminals rhyme with the logo's open "R" and crossbar-less "A".</div>
+      </article>
+
+      <article class="font-card fc-league-spartan free">
+        <div class="font-header">
+          <div class="font-name">League Spartan</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">MONUMENTAL UPPERCASE.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Hero display caps, page titles<br>
+          <strong>Vibe:</strong> Monumental geometric capitals, concrete-and-steel weight
+        </div>
+        <div class="verdict">🏛️ <strong>Same DNA at poster scale</strong> — the loud cousin your hero titles need beside the mark.</div>
+      </article>
+
+      <article class="font-card fc-inter free">
+        <div class="font-header">
+          <div class="font-name">Inter</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Quiet, readable body.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Body copy, UI, captions<br>
+          <strong>Vibe:</strong> Neutral, screen-first, invisible in paragraphs
+        </div>
+        <div class="verdict">🤫 <strong>Steps back so the logo leads</strong> — the safest body face under a strong wordmark.</div>
+      </article>
+
+      <article class="font-card fc-ibm-plex-sans free">
+        <div class="font-header">
+          <div class="font-name">IBM Plex Sans</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Technical notes &amp; data.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Specs, labels, data tables, credits<br>
+          <strong>Vibe:</strong> Engineering precision, drawing-set voice
+        </div>
+        <div class="verdict">📐 <strong>Drawing-set voice</strong> — perfect for dimensions, schedules and project data beside the logo.</div>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">5 Logo-Synced Combinations</h3>
+    <p class="subsection-note">Each pairing keeps the HYRA mark as the loudest voice on the page.</p>
+
+    <div class="combo-grid">
+      <article class="combo-card combo-6">
+        <div class="combo-badge">🏆 Primary Pick for HYRA</div>
+        <div class="combo-name">Studio Standard</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Jost (Headlines + Labels)</span>
+          <span class="combo-font-tag">Inter (Body)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">HYRA Architects</div>
+          <h3 class="combo-hero">Geometry in every line.</h3>
+          <p class="combo-tagline">Jost carries the logo's monoline Bauhaus logic from mark to page.</p>
+          <p class="combo-body">Inter stays invisible in paragraphs, letting plans and photographs lead while the type recedes.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> The entire HYRA site — one coherent system from hero to footer.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> Jost shares the logo's constructed monoline geometry; Inter gives a neutral reading layer — together they extend the mark without imitating it.</div>
+      </article>
+
+      <article class="combo-card combo-7">
+        <div class="combo-badge">🔧 Drawings &amp; Specs</div>
+        <div class="combo-name">Technical Blueprint</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Space Grotesk (Headlines)</span>
+          <span class="combo-font-tag">IBM Plex Sans (Body + Labels)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Drawing Set 04</div>
+          <h3 class="combo-hero">Precision, drawn daily.</h3>
+          <p class="combo-tagline">Space Grotesk's cut angles echo the logo's stencil gaps.</p>
+          <p class="combo-body">IBM Plex Sans sets specs, schedules and annotations with engineering calm.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Project pages, technical documentation, process sections.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> both families are technical grotesques with angular cuts — matching the logo's stencil breaks while staying legible at small sizes.</div>
+      </article>
+
+      <article class="combo-card combo-8">
+        <div class="combo-badge">🏛️ Hero Pages</div>
+        <div class="combo-name">Monumental Grid</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">League Spartan (Display)</span>
+          <span class="combo-font-tag">Source Sans 3 (Body)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Selected Works</div>
+          <h3 class="combo-hero">MONUMENTAL FORMS</h3>
+          <p class="combo-tagline">League Spartan gives hero pages the logo's structural weight.</p>
+          <p class="combo-body">Source Sans 3 keeps long project narratives clean and legible.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Landing pages, portfolio indexes, award submissions.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> League Spartan's geometric caps mirror the logo's monumental scale; Source Sans 3 balances with quiet neutrality.</div>
+      </article>
+
+      <article class="combo-card combo-9">
+        <div class="combo-badge">📖 Case Studies</div>
+        <div class="combo-name">Monograph Editorial</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Jost (Display + Labels)</span>
+          <span class="combo-font-tag">EB Garamond (Body)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Project Monograph</div>
+          <h3 class="combo-hero">Spaces that endure.</h3>
+          <p class="combo-tagline">Jost headlines meet EB Garamond's old-style warmth in long-form stories.</p>
+          <p class="combo-body">A gallery-catalogue pairing: geometry on the cover, serif in the essay.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Long case studies, journal articles, printed-look portfolios.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> geometric display + old-style serif body is the classic architecture-monograph formula — modern mark, timeless narrative.</div>
+      </article>
+
+      <article class="combo-card combo-10">
+        <div class="combo-badge">✨ Minimal Web</div>
+        <div class="combo-name">Minimal Studio</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Space Grotesk (Display)</span>
+          <span class="combo-font-tag">DM Sans (Body)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Studio Index</div>
+          <h3 class="combo-hero">Less, but sharper.</h3>
+          <p class="combo-tagline">Space Grotesk for display, DM Sans for everything else.</p>
+          <p class="combo-body">A two-font minimal system that loads fast and never competes with the mark.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Fast one-pagers, contact pages, minimal web presence.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> one expressive voice (Space Grotesk) plus one quiet voice (DM Sans) keeps the system minimal — like the logo itself.</div>
+      </article>
+    </div>
   </div>
 
   <script>
