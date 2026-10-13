@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Showcase - Business Portfolio Typography</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Figtree:wght@300;400;500;600;700;800;900&family=Jost:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700;900&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Garamond:wght@400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --fg: #1a1a2e;
+      --muted: #6b6b80;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e0e0e8;
+      --card-bg: #ffffff;
+      --card-border: #f0f0f5;
+      --btn-bg: #f5f5fa;
+      --btn-hover: #ebebf2;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0a0a12;
+      --surface: #16161f;
+      --fg: #f0f0f0;
+      --muted: #9090a8;
+      --accent: #60a5fa;
+      --accent-soft: #1e3a8a;
+      --border: #2a2a3a;
+      --card-bg: #1a1a24;
+      --card-border: #2a2a3a;
+      --btn-bg: #1e1e28;
+      --btn-hover: #2a2a3a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+      line-height: 1.5;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed; top: 1rem; right: 1rem;
+      background: var(--btn-bg); border: 1px solid var(--border);
+      width: 44px; height: 44px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      z-index: 100; transition: background 0.2s, border-color 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--accent); background: var(--btn-hover); }
+    .theme-toggle svg { width: 20px; height: 20px; color: var(--fg); }
+
+    /* Layout */
+    .container { max-width: 1280px; margin: 0 auto; padding: 2rem; padding-top: 4rem; }
+    .header { margin-bottom: 3rem; }
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .header p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    /* Legend */
+    .legend {
+      display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+    }
+    .legend-item {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.8rem; border-radius: 16px;
+      background: var(--btn-bg); border: 1px solid var(--border);
+    }
+    .legend-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .legend-dot.free { background: #22c55e; }
+    .legend-dot.commercial { background: #f59e0b; }
+    .legend-dot.italic { background: var(--accent); }
+
+    /* Font Grid */
+    .font-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* Font Card */
+    .font-card {
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .font-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .font-card.free { border-color: #22c55e; }
+    .font-card.commercial { border-color: #f59e0b; }
+
+    .font-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 1rem; gap: 0.5rem;
+    }
+
+    .font-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    /* Each font-card uses its own font for the name */
+
+    .font-status {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+    .font-status.free { background: #dcfce7; color: #16a34a; }
+    .font-status.commercial { background: #fef3c7; color: #d97706; }
+    [data-theme="dark"] .font-status.free { background: #064e3b; color: #4ade80; }
+    [data-theme="dark"] .font-status.commercial { background: #78350f; color: #fbbf24; }
+
+    .font-sample {
+      font-size: 1.5rem;
+      padding: 1.25rem 1rem;
+      background: var(--surface);
+      border-radius: 12px;
+      margin: 1rem 0;
+      color: var(--fg);
+      line-height: 1.4;
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 400;
+      transition: font-weight 0.3s, font-style 0.3s, font-size 0.3s;
+    }
+    .font-sample-bold { font-weight: 700; }
+    .font-sample-italic { font-style: italic; }
+
+    /* Font Family Assignments - Each card uses its own font */
+    .fc-inter .font-name, .fc-inter .font-sample { font-family: 'Inter', sans-serif; }
+    .fc-dm-sans .font-name, .fc-dm-sans .font-sample { font-family: 'DM Sans', sans-serif; }
+    .fc-montserrat .font-name, .fc-montserrat .font-sample { font-family: 'Montserrat', sans-serif; }
+    .fc-figtree .font-name, .fc-figtree .font-sample { font-family: 'Figtree', sans-serif; }
+    .fc-jost .font-name, .fc-jost .font-sample { font-family: 'Jost', sans-serif; }
+    .fc-roboto .font-name, .fc-roboto .font-sample { font-family: 'Roboto', sans-serif; }
+    .fc-space-grotesk .font-name, .fc-space-grotesk .font-sample { font-family: 'Space Grotesk', sans-serif; }
+    .fc-source-sans-3 .font-name, .fc-source-sans-3 .font-sample { font-family: 'Source Sans 3', sans-serif; }
+    .fc-ibm-plex-serif .font-name, .fc-ibm-plex-serif .font-sample { font-family: 'IBM Plex Serif', serif; }
+    .fc-ibm-plex-sans .font-name, .fc-ibm-plex-sans .font-sample { font-family: 'IBM Plex Sans', sans-serif; }
+    .fc-syne .font-name, .fc-syne .font-sample { font-family: 'Syne', sans-serif; }
+    .fc-playfair .font-name, .fc-playfair .font-sample { font-family: 'Playfair Display', serif; }
+    .fc-garamond .font-name, .fc-garamond .font-sample { font-family: 'Garamond', serif; }
+    .fc-bodoni .font-name, .fc-bodoni .font-sample { font-family: 'Bodoni Moda', serif; }
+    .fc-lora .font-name, .fc-lora .font-sample { font-family: 'Lora', serif; }
+
+    /* Style Toggle Buttons */
+    .style-toggles {
+      display: flex; gap: 0.5rem; margin: 0.75rem 0;
+    }
+    .toggle-btn {
+      flex: 1;
+      padding: 0.5rem;
+      background: var(--btn-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+    .toggle-btn:hover { background: var(--btn-hover); color: var(--fg); }
+    .toggle-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    /* Font Info */
+    .font-info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .font-info strong { color: var(--fg); font-weight: 600; }
+
+    .verdict {
+      background: var(--btn-bg);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--fg);
+      margin-top: 0.75rem;
+      border-left: 4px solid var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: block;">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+  </button>
+
+  <div class="container">
+    <div class="header">
+      <h1>Font Showcase</h1>
+      <p>Explore 14 hand-picked fonts for business portfolios. Each font displays in its actual typeface with clickable toggles for bold and italic. Light/dark mode lets you preview both contexts.</p>
+
+      <div class="legend">
+        <span class="legend-item"><span class="legend-dot free"></span> Free Google Fonts</span>
+        <span class="legend-item"><span class="legend-dot commercial"></span> Commercial / System</span>
+        <span class="legend-item"><span class="legend-dot italic"></span> Click <strong>Bold</strong> or <strong>Italics</strong> to preview styles</span>
+      </div>
+    </div>
+
+    <div class="font-grid">
+      <!-- 1. INTER -->
+      <article class="font-card fc-inter free">
+        <div class="font-header">
+          <div class="font-name">Inter</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Designed to clearly work.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Body text, UI, dense paragraphs<br>
+          <strong>Vibe:</strong> Ultra-clean, neutral, exceptionally readable at small sizes
+        </div>
+        <div class="verdict">🏆 <strong>Top recommendation</strong> — The default choice for modern portfolios. Used by Linear, Vercel, and YC startups.</div>
+      </article>
+
+      <!-- 2. DM SANS -->
+      <article class="font-card fc-dm-sans free">
+        <div class="font-header">
+          <div class="font-name">DM Sans</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Marketing made simple.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Smaller text, captions, secondary copy<br>
+          <strong>Vibe:</strong> Low-contrast geometric, clean, modern, not sterile
+        </div>
+        <div class="verdict">🥉 <strong>Great body alternate</strong> — Designed for digital at smaller sizes. Pairs well with Inter for stronger hierarchy.</div>
+      </article>
+
+      <!-- 3. MONTSERRAT -->
+      <article class="font-card fc-montserrat free">
+        <div class="font-header">
+          <div class="font-name">Montserrat</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Bold. Geometric. Strong.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Headlines, hero sections, display text<br>
+          <strong>Vibe:</strong> Bold, geometric, urban signage-inspired, strong presence
+        </div>
+        <div class="verdict">🥈 <strong>Headline king</strong> — Geometric sans inspired by Buenos Aires street signs. Perfect for portfolio titles.</div>
+      </article>
+
+      <!-- 4. FIGTREE -->
+      <article class="font-card fc-figtree free">
+        <div class="font-header">
+          <div class="font-name">Figtree</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Friendly. Open. Modern.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Modern headlines, editorial, friendly tech feel<br>
+          <strong>Vibe:</strong> Modern, open, friendly geometric sans-serif
+        </div>
+        <div class="verdict">👍 <strong>Solid modern choice</strong> — Approachable yet professional. Excellent Montserrat alternative.</div>
+      </article>
+
+      <!-- 5. JOST -->
+      <article class="font-card fc-jost free">
+        <div class="font-header">
+          <div class="font-name">Jost</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Geometric. Bauhaus. Pure.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Bauhaus-inspired geometric layouts<br>
+          <strong>Vibe:</strong> Mathematically perfect, Bauhaus-inspired, structured
+        </div>
+        <div class="verdict">💫 <strong>Premium feeling</strong> — Distinctive, less common. Best for architectural portfolios wanting Bauhaus association.</div>
+      </article>
+
+      <!-- 6. ROBOTO -->
+      <article class="font-card fc-roboto free">
+        <div class="font-header">
+          <div class="font-name">Roboto</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">A trusted everyday choice.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Classic web body text, general purpose<br>
+          <strong>Vibe:</strong> Google's classic Android font, highly functional and approachable
+        </div>
+        <div class="verdict">👍 <strong>Trusted workhorse</strong> — Reliable, well-supported. Use if Inter isn't preferred.</div>
+      </article>
+
+      <!-- 7. SPACE GROTESK -->
+      <article class="font-card fc-space-grotesk free">
+        <div class="font-header">
+          <div class="font-name">Space Grotesk</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Engineering precision.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Technical headlines, blueprint-like display<br>
+          <strong>Vibe:</strong> Technical, raw, blueprint-like, sharp angles
+        </div>
+        <div class="verdict">🔧 <strong>Technical focus</strong> — Unique character shapes. Great for tech and engineering portfolios.</div>
+      </article>
+
+      <!-- 8. SOURCE SANS 3 -->
+      <article class="font-card fc-source-sans-3 free">
+        <div class="font-header">
+          <div class="font-name">Source Sans 3</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Designed for clarity.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Adobe UI, documentation, professional apps<br>
+          <strong>Vibe:</strong> Clean, legible, designed for UI and documentation
+        </div>
+        <div class="verdict">🏢 <strong>Corporate standard</strong> — Adobe's official UI font. Reliable for conservative business use.</div>
+      </article>
+
+      <!-- 9. IBM PLEX SERIF -->
+      <article class="font-card fc-ibm-plex-serif free">
+        <div class="font-header">
+          <div class="font-name">IBM Plex Serif</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Industrial. Authoritative.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Headlines, data-heavy content, editorial<br>
+          <strong>Vibe:</strong> Industrial, structured, mechanical authority
+        </div>
+        <div class="verdict">🏭 <strong>Authoritative</strong> — Industrial feel with mechanical personality. Pairs perfectly with Plex Sans.</div>
+      </article>
+
+      <!-- 10. IBM PLEX SANS -->
+      <article class="font-card fc-ibm-plex-sans free">
+        <div class="font-header">
+          <div class="font-name">IBM Plex Sans</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Sharp. Technical. Clean.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Body text, technical UI, data-heavy sites<br>
+          <strong>Vibe:</strong> Sharp, technical, corporate authority
+        </div>
+        <div class="verdict">🏭 <strong>Technical companion</strong> — Sharp serif counterpart. Pair with IBM Plex Serif for structured authority.</div>
+      </article>
+
+      <!-- 11. SYNE -->
+      <article class="font-card fc-syne free">
+        <div class="font-header">
+          <div class="font-name">Syne</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Quirky. Distinctive. Creative.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Creative headlines, distinctive display<br>
+          <strong>Vibe:</strong> Expressive, quirky, distinctive geometric character
+        </div>
+        <div class="verdict">🎨 <strong>Creative wildcard</strong> — Very distinctive character shapes. Best for creative agencies wanting personality.</div>
+      </article>
+
+      <!-- 12. PLAYFAIR DISPLAY -->
+      <article class="font-card fc-playfair commercial" style="border-color: #f59e0b;">
+        <div class="font-header">
+          <div class="font-name">Playfair Display</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Elegant. Timeless Luxury.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Elegant headlines, luxury, editorial<br>
+          <strong>Vibe:</strong> High-contrast, elegant, premium feel
+        </div>
+        <div class="verdict">💎 <strong>Luxury serif</strong> — High-contrast mod-style serif. Pairs with system sans for body. Best for upscale brands.</div>
+      </article>
+
+      <!-- 13. LORA -->
+      <article class="font-card fc-lora free">
+        <div class="font-header">
+          <div class="font-name">Lora</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Editorial warmth in type.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Body text, editorial, case studies<br>
+          <strong>Vibe:</strong> Contemporary, well-balanced, gentle serif
+        </div>
+        <div class="verdict">📚 <strong>Editorial body</strong> — Excellent for long-form case studies. Pairs with Inter or Montserrat.</div>
+      </article>
+
+      <!-- 14. BODONI MODA -->
+      <article class="font-card fc-bodoni free">
+        <div class="font-header">
+          <div class="font-name">Bodoni Moda</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Refined. Editorial. Premium.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Premium fashion display, museum-quality titles<br>
+          <strong>Vibe:</strong> Extreme thick-and-thin contrast, premium luxury aesthetic
+        </div>
+        <div class="verdict">✨ <strong>High-fashion display</strong> — Striking thick/thin contrast. Only for large display sizes. Best for fashion/luxury portfolios.</div>
+      </article>
+
+      <!-- 15. GARAMOND -->
+      <article class="font-card fc-garamond free">
+        <div class="font-header">
+          <div class="font-name">Garamond</div>
+          <div class="font-status free">✅ Free Google Font</div>
+        </div>
+        <div class="font-sample">Classic. Timeless. Heritage.</div>
+        <div class="style-toggles">
+          <button class="toggle-btn bold-btn" onclick="toggleBold(this)">BOLD</button>
+          <button class="toggle-btn italic-btn" onclick="toggleItalic(this)">ITALICS</button>
+        </div>
+        <div class="font-info">
+          <strong>Best for:</strong> Traditional body, booklets, formal documents<br>
+          <strong>Vibe:</strong> Classic, traditional, low stroke contrast with bracketed serifs
+        </div>
+        <div class="verdict">📜 <strong>Classic serif</strong> — Old-style serif with traditional authority. Best for heritage brands and editorial sites.</div>
+      </article>
+    </div>
+  </div>
+
+  <script>
+    // Theme toggle (light/dark mode)
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+      
+      if (isDark) {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      } else {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      }
+    }
+
+    // Bold toggle - finds the font-sample in the same card and toggles bold class
+    function toggleBold(btn) {
+      btn.classList.toggle('active');
+      const card = btn.closest('.font-card');
+      const sample = card.querySelector('.font-sample');
+      sample.classList.toggle('font-sample-bold');
+    }
+
+    // Italic toggle - finds the font-sample in same card and toggles italic class
+    function toggleItalic(btn) {
+      btn.classList.toggle('active');
+      const card = btn.closest('.font-card');
+      const sample = card.querySelector('.font-sample');
+      sample.classList.toggle('font-sample-italic');
+    }
+  </script>
+</body>
+</html>
