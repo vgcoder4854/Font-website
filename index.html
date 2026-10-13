@@ -223,6 +223,165 @@
       margin-top: 0.75rem;
       border-left: 4px solid var(--accent);
     }
+
+    /* ===== COMBINATION SECTION ===== */
+    .section-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin: 4rem 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .section-subheading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .combo-card {
+      background: var(--card-bg);
+      border: 2px solid var(--accent);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .combo-card:hover { transform: translateY(-4px); }
+
+    .combo-badge {
+      position: absolute;
+      top: -10px;
+      right: 1.25rem;
+      background: var(--accent);
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 12px;
+    }
+
+    .combo-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .combo-fonts {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .combo-font-tag {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      background: var(--btn-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    /* Live preview area */
+    .combo-preview {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      color: var(--fg);
+    }
+
+    .combo-hero {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem 0;
+    }
+    .combo-tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0 0 1rem 0;
+    }
+    .combo-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin: 0 0 1rem 0;
+    }
+    .combo-label {
+      display: inline-block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .combo-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .combo-verdict {
+      background: var(--btn-bg);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--fg);
+      margin-top: 0.75rem;
+      border-left: 4px solid var(--accent);
+    }
+    .combo-verdict strong { color: var(--accent); font-weight: 600; }
+
+    /* Individual combo font-family assignments */
+    .combo-1 .combo-preview .combo-hero { font-family: 'Montserrat', sans-serif; }
+    .combo-1 .combo-preview .combo-tagline { font-family: 'Inter', sans-serif; }
+    .combo-1 .combo-preview .combo-body { font-family: 'Inter', sans-serif; }
+    .combo-1 .combo-preview .combo-label { font-family: 'Montserrat', sans-serif; }
+
+    .combo-2 .combo-preview .combo-hero { font-family: 'Playfair Display', serif; }
+    .combo-2 .combo-preview .combo-tagline { font-family: 'Lora', serif; }
+    .combo-2 .combo-preview .combo-body { font-family: 'Lora', serif; }
+    .combo-2 .combo-preview .combo-label { font-family: 'Montserrat', sans-serif; }
+
+    .combo-3 .combo-preview .combo-hero { font-family: 'Space Grotesk', sans-serif; font-style: italic; }
+    .combo-3 .combo-preview .combo-tagline { font-family: 'Inter', sans-serif; }
+    .combo-3 .combo-preview .combo-body { font-family: 'Inter', sans-serif; }
+    .combo-3 .combo-preview .combo-label { font-family: 'IBM Plex Sans', sans-serif; }
+
+    .combo-4 .combo-preview .combo-hero { font-family: 'Jost', sans-serif; }
+    .combo-4 .combo-preview .combo-tagline { font-family: 'DM Sans', sans-serif; }
+    .combo-4 .combo-preview .combo-body { font-family: 'DM Sans', sans-serif; }
+    .combo-4 .combo-preview .combo-label { font-family: 'Jost', sans-serif; }
+
+    .combo-5 .combo-preview .combo-hero { font-family: 'Bodoni Moda', serif; }
+    .combo-5 .combo-preview .combo-tagline { font-family: 'Source Sans 3', sans-serif; }
+    .combo-5 .combo-preview .combo-body { font-family: 'Source Sans 3', sans-serif; }
+    .combo-5 .combo-preview .combo-label { font-family: 'DM Sans', sans-serif; }
   </style>
 </head>
 <body>
@@ -527,10 +686,110 @@
         <div class="verdict">📜 <strong>Classic serif</strong> — Old-style serif with traditional authority. Best for heritage brands and editorial sites.</div>
       </article>
     </div>
+
+    <!-- ===== COMBINATION SECTION ===== -->
+    <h2 class="section-heading">5 Recommended Font Combinations</h2>
+    <p class="section-subheading">Hand-picked pairings for business portfolios — architectural firms and startups. Each combination shows the actual fonts working together in a hero, tagline, label, and body layout.</p>
+
+    <div class="combo-grid">
+
+      <!-- COMBINATION 1: Modern Startup Standard -->
+      <article class="combo-card combo-1">
+        <div class="combo-badge">🏆 Best for Tech Startups</div>
+        <div class="combo-name">Modern Startup Standard</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Montserrat (Headlines)</span>
+          <span class="combo-font-tag">Inter (Body)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Featured Project</div>
+          <h3 class="combo-hero">Ship Faster.</h3>
+          <p class="combo-tagline">A clean, modern pairing adopted by Linear, Vercel, and YC startups.</p>
+          <p class="combo-body">Inter handles dense body text beautifully, while Montserrat makes every headline pop with geometric confidence.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Tech-forward portfolios, SaaS companies, modern startup websites.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> Both are geometric sans-serifs that share similar proportions. Inter's neutrality gives Montserrat room to lead the page.</div>
+      </article>
+
+      <!-- COMBINATION 2: Editorial Architect -->
+      <article class="combo-card combo-2">
+        <div class="combo-badge">👑 Best for Architects</div>
+        <div class="combo-name">Editorial Architect</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Playfair Display (Headlines)</span>
+          <span class="combo-font-tag">Lora (Body)</span>
+          <span class="combo-font-tag">Montserrat (Labels)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Built Space</div>
+          <h3 class="combo-hero">Form Follows Function</h3>
+          <p class="combo-tagline">A timeless serif pairing inspired by museum catalogs and editorial architecture books.</p>
+          <p class="combo-body">Playfair Display elevates headlines with luxury contrast, while Lora's gentle serifs provide warmth to project descriptions.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Architectural firms wanting traditional authority, editorial portfolios, heritage brands.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> Two serifs share classical heritage but feel distinct — Playfair leads with drama, Lora whispers with warmth.</div>
+      </article>
+
+      <!-- COMBINATION 3: Technical Innovator -->
+      <article class="combo-card combo-3">
+        <div class="combo-badge">🔧 Best for Engineering Firms</div>
+        <div class="combo-name">Technical Innovator</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Space Grotesk (Headlines)</span>
+          <span class="combo-font-tag">Inter (Body)</span>
+          <span class="combo-font-tag">IBM Plex Sans (Labels)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Precision Engineering</div>
+          <h3 class="combo-hero">Built to Scale</h3>
+          <p class="combo-tagline">For technical founders and engineers who value clarity over decoration.</p>
+          <p class="combo-body">Space Grotesk's angular geometry signals technical fluency. Inter grounds the body text. IBM Plex labels add structured authority.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Tech startups, engineering firms, developer-focused portfolios, data-heavy sites.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> All three fonts share modernist DNA but each has a distinct character — quirky, neutral, and industrial.</div>
+      </article>
+
+      <!-- COMBINATION 4: Bauhaus Architect Studio -->
+      <article class="combo-card combo-4">
+        <div class="combo-badge">💫 Best for Design Studios</div>
+        <div class="combo-name">Bauhaus Architect Studio</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Jost (Headlines & Labels)</span>
+          <span class="combo-font-tag">DM Sans (Body)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Studio Practice</div>
+          <h3 class="combo-hero">Built from Geometry</h3>
+          <p class="combo-tagline">Mathematical precision meets geometric elegance — a Bauhaus-inspired identity.</p>
+          <p class="combo-body">Jost's Bauhaus roots add architectural credibility. DM Sans keeps body text calm and readable. Both share geometric DNA.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Architectural design studios, modern firms wanting mathematical precision, creative practices.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> Two geometric sans-serifs designed by Bauhaus principles — Jost leads, DM Sans supports.</div>
+      </article>
+
+      <!-- COMBINATION 5: Premium Luxury Brand -->
+      <article class="combo-card combo-5">
+        <div class="combo-badge">💎 Best for Premium Brands</div>
+        <div class="combo-name">Premium Luxury Brand</div>
+        <div class="combo-fonts">
+          <span class="combo-font-tag">Bodoni Moda (Headlines)</span>
+          <span class="combo-font-tag">Source Sans 3 (Body)</span>
+          <span class="combo-font-tag">DM Sans (Labels)</span>
+        </div>
+        <div class="combo-preview">
+          <div class="combo-label">Studio Atelier</div>
+          <h3 class="combo-hero">Refined Details.</h3>
+          <p class="combo-tagline">Bodoni Moda's thick-thin contrast brings boutique fashion and luxury authority.</p>
+          <p class="combo-body">Source Sans 3 keeps body text reliable and clear. DM Sans adds crisp metadata. Pair with restraint — only use Bodoni for hero moments.</p>
+          <div class="combo-meta"><strong>Recommended for:</strong> Luxury brands, fashion houses, premium consulting, high-end interior design portfolios.</div>
+        </div>
+        <div class="combo-verdict"><strong>Why it works:</strong> Bodoni screams. Source Sans whispers — high contrast serif display makes headlines unforgettable, while neutral sans keeps pages usable.</div>
+      </article>
+    </div>
+
   </div>
 
   <script>
-    // Theme toggle (light/dark mode)
     function toggleTheme() {
       const html = document.documentElement;
       const isDark = html.getAttribute('data-theme') === 'dark';
